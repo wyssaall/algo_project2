@@ -1,1 +1,53 @@
 # algo_project2
+
+## DESCRIPTION
+
+<!--PROBLEM 1-->
+
+- Given two sets of elements, find the sum of all distinct elements from the set. In other words, find the sum of all elements which are present in either of the given set.
+<!--PROBLEM 2-->
+- Write a procedure, called dot_product which calculates in the variable ps, the dot(scalar) product of v1 and v2 (v1 and v2 are vectors of IR)
+- Write an algorithm which determines, for n pairs of given vectors, whether two vectors of given IR are orthogonal, by calling the procedure defined in the previous question. The dot product of two orthogonal vectors is zero.
+
+## ALGORITHM
+
+### PROBLEM 1
+
+Algorithm sum_distinct_elements <!--name of algo-->
+
+Var: <!--variables-->
+tab_1 :ARRAY_OF integer[4]; <!--first table-->
+tab_2 :ARRAY_OF integer[4]; <!--second table-->
+tab_3 :ARRAY_OF integer[8]; <!--third table, where we put the distinct elements-->
+i, j, z, sum : integer; <!--i, j, z for for loop and sum to store the result-->
+
+<!--THE BODY-->
+
+BEGIN
+
+<!--initialization-->
+
+tab_1 :=[1, 2, 4, 8];
+tab_2 :=[2, 3, 7, 5];
+sum := o;
+
+<!--elements of the first table with the second-->
+
+for(i from 0 to 3) do
+for(j from 0 to 3) do
+if(tab_1[i] == tab_2[j]) then
+break;
+else
+for (z from 0 to tab_3.length-1) do
+tab3[z] := tab1[i];
+z := z + 1;
+END_FOR
+END_IF
+END_FOR
+END_FOR
+
+for(z from 0 to tab_3.length-1) do
+sum := sum + tab_3[z]
+END_FOR
+
+### PROBLEM 2
