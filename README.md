@@ -72,7 +72,10 @@ END_FOR
 procedure dot_product(v, w, produit)
 produit :=0; <!--le resultat du produit-->
 for(i from 0 to 2 ) do
-produit := produit + v(i) x w(i); <!--calcule le produit element par element et faire la somme-->
+for(j from 0 to 2 ) do
+if (i = j) then
+produit := produit + v(i) x w(j); <!--calcule le produit element par element et faire la somme-->
+END_IF
 PRINT(produit);
 END_FOR
 END_PROCEDURE
@@ -84,7 +87,7 @@ ALGORITHM check_orthogonality
 var:
 v: table_of integer[3];
 w: table_of integer[3];
-i : integer;
+i, j : integer;
 produit: integer;
 
 BEGIN
@@ -94,8 +97,10 @@ BEGIN
 for(i from 0 to 2 ) do
 PRINT("Enter value for v[", i+1, "]: ");
 READ(v(i));
-PRINT("Enter value for w[", i+1, "]: ");
-READ(w(i));
+END_FOR
+for(j from 0 to 2 ) do
+PRINT("Enter value for w[", j+1, "]: ");
+READ(w(j));
 END_FOR
 
 <!--calculer le produit scalaire-->
